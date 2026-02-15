@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coisas Diversas</title>
+    <style>
+        body{
+            background: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            height: 200px;
+            line-height: 100px;
+            text-align: center;
+        }
+
+        h1{
+            color: whitesmoke;
+            font: normal 30pt 𝙼𝚘𝚗𝚘𝚜𝚙𝚊𝚌𝚎;
+        }
+
+        input{
+            background: black;
+            color: white;
+            font: normal 18pt arial;
+            width: 100px;
+            text-align: center;
+            border-color: white;
+        }
+        div#res {
+            border-color: white;
+            border: white;
+            margin-left: 825px;
+            font: normal 18pt arial;
+            width: 200px;
+            height: 25px;
+            text-align: center;
+            text-align: center;
+            background-color: rgb(0, 0, 0);  
+            padding: 10px 20px;
+            color: white;
+            image-rendering: pixelated;
+        }
+
+        #butau{
+            background: black;
+            color: white;
+            font: normal 18pt arial;
+            width: 100px;
+            text-align: center;        
+        }
+        
+
+        div#dig{
+            margin-left: 825px;
+            margin-top: 50px;
+            font: normal 18pt arial;
+            width: 200px;
+            height: 25px;
+            text-align: center;
+            background-color: rgb(0, 0, 0);  
+            border: white;
+            padding: 10px 20px;
+            color: white;
+            image-rendering: pixelated;
+        }
+        
+        p#p1{
+            border-color: red;
+            margin-top: 100px;
+            margin-left: 850px;
+            background-color: rgba(49, 51, 48, 0.129);
+            width: 200px;
+            height: 125px;
+            text-align: center;
+            line-height: 200px;
+            color: rgb(255, 255, 255);
+            font: normal 20pt arial;
+            
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Somando de tudo</h1>
+
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2"> =
+    <input type="button" value="somar" onclick="somar()" id="butau">
+    <div id="res">Resultado</div>
+
+    <div id="dig">Seu nome aparecerá aqui</div>
+    <input type="text" name="txt1" id="janemseioquefazer"> -->
+    <input type="button" value="mostrar" onclick="mostrar()" id="mostrar"> 
+
+    <script> 
+
+    function mostrar(){
+        let nome = window.document.getElementById('janemseioquefazer')
+        let dig = window.document.getElementById('dig')
+        let mendingo = String(nome.value)
+        dig.innerHTML = `Aqui teu nome: ${mendingo}`
+        
+    }
+  
+    function somar() {
+        let tn1 = window.document.getElementById('txtn1')
+        let tn2 = window.document.getElementById('txtn2')
+        let res = window.document.getElementById('res')
+        let n1 = Number(tn1.value)
+        let n2 = Number(tn2.value)
+        let s = n1 + n2
+        res.innerHTML = `<strong>${s}</strong>`
+    }
+        
+    const a = window.document.getElementById('mostrar')
+    a.addEventListener('click', clicar0)
+    a.addEventListener('mouseenter', entrar0)
+    a.addEventListener('mouseout', sair0)
+
+    function clicar0(){
+        a.style.background = 'yellow'
+        a.style.color = 'black'
+    }
+
+    function entrar0(){
+        a.style.background = 'black'
+        a.style.color = 'white'
+    }
+
+    function sair0(){
+        a.style.background = 'black'
+        a.style.color = 'white'
+
+    }
+
+    const b = window.document.getElementById('butau')
+    b.addEventListener('click', clicar1)
+    b.addEventListener('mosueenter', entrar1)
+    b.addEventListener('mouseout', sair1)
+
+    function clicar1(){
+        b.style.background = 'yellow'
+        b.style.color = 'black'
+    }
+
+    function entrar1(){
+        b.style.background = 'black'
+        b.style.color = 'white'
+    }
+    function sair1(){
+        b.style.background = 'black'
+        b.style.color = 'white'
+
+    }
+
+    </script>
+    
+</body>
+</html>
